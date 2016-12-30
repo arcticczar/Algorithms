@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Dec 30 07:04:06 2016
+
+@author: matt
+"""
+
+import random
+
+#Define all characters as input
+chars = "abcdefghijklmnopqrstuvwxyz1234567890"
+
+#select a random set of characters as a random generated key.
+def keygen(length = 12, inputchars=chars):
+    return "".join(random.SystemRandom().choice(inputchars) for I in range (length))
+    
+print (keygen())
